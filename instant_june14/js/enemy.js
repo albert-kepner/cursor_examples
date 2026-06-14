@@ -24,12 +24,12 @@ export class Enemy {
     this.waitTimer = 0;
 
     const bodyGeo = new THREE.BoxGeometry(1, 1.8, 0.6);
-    const bodyMat = new THREE.MeshStandardMaterial({ color: 0xc0392b, roughness: 0.6 });
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0xff2222, roughness: 0.4 });
     this.mesh = new THREE.Mesh(bodyGeo, bodyMat);
     this.mesh.castShadow = true;
 
     const headGeo = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-    const headMat = new THREE.MeshStandardMaterial({ color: 0x922b21 });
+    const headMat = new THREE.MeshStandardMaterial({ color: 0xff4444, roughness: 0.4 });
     this.head = new THREE.Mesh(headGeo, headMat);
     this.head.position.y = 1.15;
     this.mesh.add(this.head);
