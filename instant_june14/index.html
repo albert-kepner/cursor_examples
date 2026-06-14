@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arena FPS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud">
+      <div id="crosshair"></div>
+      <div id="player-health">
+        <span class="label">YOU</span>
+        <div class="bar-bg"><div id="player-health-bar" class="bar-fill"></div></div>
+        <span id="player-health-text">100</span>
+      </div>
+      <div id="enemy-health">
+        <span class="label">ENEMY</span>
+        <div class="bar-bg"><div id="enemy-health-bar" class="bar-fill enemy"></div></div>
+        <span id="enemy-health-text">100</span>
+      </div>
+    </div>
+
+    <div id="overlay" class="visible">
+      <h1>ARENA FPS</h1>
+      <p class="subtitle">First-person shooter — keyboard only</p>
+      <div class="instructions">
+        <p><kbd>↑</kbd> <kbd>↓</kbd> Move forward / backward</p>
+        <p><kbd>←</kbd> <kbd>→</kbd> Turn left / right</p>
+        <p><kbd>Space</kbd> Shoot</p>
+      </div>
+      <p class="prompt">Press <kbd>Enter</kbd> to start</p>
+    </div>
+
+    <div id="flash"></div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
