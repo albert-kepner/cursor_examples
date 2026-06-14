@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 const MOVE_SPEED = 8;
-const TURN_SPEED = 2.2;
+const TURN_SPEED = 0.44;
 const EYE_HEIGHT = 1.6;
 const PLAYER_RADIUS = 0.5;
 const SHOOT_COOLDOWN = 0.4;
@@ -22,8 +22,8 @@ export class Player {
   update(dt, keys, arena) {
     if (!this.alive) return;
 
-    if (keys.ArrowLeft) this.yaw -= TURN_SPEED * dt;
-    if (keys.ArrowRight) this.yaw += TURN_SPEED * dt;
+    if (keys.ArrowLeft) this.yaw += TURN_SPEED * dt;
+    if (keys.ArrowRight) this.yaw -= TURN_SPEED * dt;
 
     let dx = 0;
     let dz = 0;
